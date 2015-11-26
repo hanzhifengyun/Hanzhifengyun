@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hanzhifengyun</string>
+
+    <array name="activity_startup">
+        <item>1.Android应用初体验</item>
+
+    </array>
+</resources>
