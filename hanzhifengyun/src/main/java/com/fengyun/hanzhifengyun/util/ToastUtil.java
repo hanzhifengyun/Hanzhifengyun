@@ -7,6 +7,9 @@ import android.widget.Toast;
  * Created by fengyun on 2015/10/20.
  */
 public class ToastUtil {
+    private ToastUtil(){
+
+    }
     private static Toast mToast;
 
     public static void showToast(Context context, CharSequence text, int duration) {
@@ -18,4 +21,14 @@ public class ToastUtil {
         }
         mToast.show();
     }
+
+    public static void showShortToast(Context context, CharSequence text) {
+        if (mToast == null) {
+            mToast = Toast.makeText(context, text, Toast.LENGTH_SHORT);
+        } else {
+            mToast.setText(text);
+        }
+        mToast.show();
+    }
+
 }

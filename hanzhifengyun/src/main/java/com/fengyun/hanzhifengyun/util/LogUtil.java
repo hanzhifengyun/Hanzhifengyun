@@ -41,4 +41,9 @@ public class LogUtil {
             Log.e(tag, msg);
         }
     }
+
+
+    private LogUtil(){
+
+    }
 }

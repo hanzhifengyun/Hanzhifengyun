@@ -1,12 +1,12 @@
 package com.fengyun.hanzhifengyun.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.fengyun.hanzhifengyun.R;
 import com.fengyun.hanzhifengyun.util.ActivityCollector;
@@ -48,6 +48,13 @@ public class BaseActivity extends FragmentActivity {
     }
 
     protected void showShortToast(String content){
-        ToastUtil.showToast(this, content, Toast.LENGTH_SHORT);
+        ToastUtil.showShortToast(this, content);
+    }
+
+
+
+    protected void intent2Activity(Class<? extends Activity> tarActivity) {
+        Intent intent = new Intent(this, tarActivity);
+        startActivity(intent);
     }
 }
