@@ -1,12 +1,17 @@
 package com.fengyun.hanzhifengyun.activity;
 
+import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
+import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.fengyun.hanzhifengyun.R;
 import com.fengyun.hanzhifengyun.util.ActivityCollector;
 import com.fengyun.hanzhifengyun.util.ToastUtil;
+import com.readystatesoftware.systembartint.SystemBarTintManager;
 
 
 /**
@@ -17,6 +22,23 @@ public class BaseActivity extends FragmentActivity {
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         ActivityCollector.addActivity(this);
+        setStatusBarColor(this);
+    }
+
+
+    public void setStatusBarColor(Activity context)
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            context.getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            context.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            context.getWindow().setStatusBarColor(context.getResources().getColor(R.color.colorPrimary));
+        }
+        else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);
+            tintManager.setStatusBarTintColor(getResources().getColor(R.color.colorPrimary));
+            tintManager.setStatusBarTintEnabled(true);
+        }
     }
 
     @Override
