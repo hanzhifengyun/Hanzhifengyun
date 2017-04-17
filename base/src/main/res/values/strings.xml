@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Base</string>
+    <string name="network_failure">当前网络连接不可用，请确认网络状态后重试。</string>
+    <string name="cancel">取消</string>
+    <string name="go_setting">去设置</string>
+</resources>

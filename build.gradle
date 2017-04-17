@@ -5,8 +5,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
-
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -20,4 +20,69 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 15
+    targetSdkVersion = 25
+    compileSdkVersion = 25
+    buildToolsVersion = '25.0.0'
+    applicationId = 'com.bwpsoft.breedingpoultry'
+    versionCode = 8
+    versionName = '0.0.8'
+
+    //region App dependencies
+    supportLibraryVersion = '25.2.0'
+    butterknifeVersion = '8.4.0'
+    analyticsVersion = 'latest.integration'
+    loggerVersion = '1.15'
+    //endregion
+
+    easypermissionsVersion = '0.3.0'
+    //region Http dependencies
+    okhttpVersion = '3.4.1'
+    okioVersion = '1.10.0'
+    retrofitVersion = '2.1.0'
+    //endregion
+
+    //region SQLite3
+    sqlbriteVersion = '0.7.0'
+    //endregion
+
+    //region LitePal
+    litePalVersion = '1.5.0'
+    //endregion
+
+    //region Gson
+    gsonVersion = '2.8.0'
+    //endregion
+
+    //region Local unit tests
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    espressoVersion = '2.2.2'
+    runnerVersion = '0.5'
+    //endregion
+
+    //region RxJava
+    RxJavaVersion = '2.0.4'
+    RxJavaStreamsVersion = '1.0.0'
+    RxAndroidVersion = '2.0.1'
+    //endregion
+
+    //region Dagger
+    daggerVersion = '2.5'
+    //endregion
+
+    //region Dagger
+    leakcanaryVersion = '1.5'
+    //endregion
+
+    //region Dagger
+    greendaoVersion = '3.2.0'
+    //endregion
+
 }
