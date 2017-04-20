@@ -8,7 +8,6 @@ import android.widget.ListView;
 import com.fengyun.hanzhifengyun.R;
 import com.fengyun.hanzhifengyun.adapter.CommonListViewAdapter;
 import com.fengyun.hanzhifengyun.adapter.CommonViewHolder;
-import com.fengyun.hanzhifengyun.fragment.LockPatternFragment;
 import com.fengyun.hanzhifengyun.util.ActivityCollector;
 
 import java.util.ArrayList;
@@ -48,6 +47,10 @@ public class MainActivity extends BaseActivity {
                     }
                     case 2: {
                         ActivityCollector.finishAll();
+                        break;
+                    }
+                    case 3: {
+                        intent2Activity(DownloadActivity.class);
                         break;
                     }
                 }
