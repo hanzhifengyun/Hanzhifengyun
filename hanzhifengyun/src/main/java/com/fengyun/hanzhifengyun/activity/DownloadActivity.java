@@ -112,9 +112,9 @@ public class DownloadActivity extends BaseActivity {
     private void getData() {
         for (int i = 0; i < 5; i++) {
             DownloadTask downloadTask = new DownloadTask();
-            downloadTask.setBaseUrl("http://bwp.oss-cn-beijing.aliyuncs.com/")
+            downloadTask.setBaseUrl("http://www.baidu.com/")
                     .setSavePath(Environment.getExternalStorageDirectory().getAbsolutePath() + "/app-gmzh-release.apk")
-                    .setDownloadUrl("publish/app-shangnong/app-gmzh-release.apk");
+                    .setDownloadUrl("http://bwp.oss-cn-beijing.aliyuncs.com/publish/app-shangnong/app-gmzh-release.apk");
             downloadTask.setDownloadListener(new DownloadListener() {
                 @Override
                 public void onFinished(DownloadTask downloadTask) {

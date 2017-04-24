@@ -53,6 +53,10 @@ public class MainActivity extends BaseActivity {
                         intent2Activity(DownloadActivity.class);
                         break;
                     }
+                    case 4: {
+                        intent2Activity(RxBusActivity.class);
+                        break;
+                    }
                 }
 
             }

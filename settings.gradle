@@ -1,1 +1,1 @@
-include ':hanzhifengyun', ':base', ':download'
+include ':hanzhifengyun', ':base', ':download', ':rxbus'

@@ -27,6 +27,9 @@
         <activity android:name=".activity.LockPatternSettingActivity"/>
         <activity android:name=".activity.DownloadActivity">
         </activity>
+
+
+        <activity android:name=".activity.RxBusActivity"/>
     </application>
 
 </manifest>

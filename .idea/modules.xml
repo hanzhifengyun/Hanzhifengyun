@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/download/download.iml" filepath="$PROJECT_DIR$/download/download.iml" />
       <module fileurl="file://$PROJECT_DIR$/hanzhifengyun/hanzhifengyun.iml" filepath="$PROJECT_DIR$/hanzhifengyun/hanzhifengyun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxbus/rxbus.iml" filepath="$PROJECT_DIR$/rxbus/rxbus.iml" />
     </modules>
   </component>
 </project>
